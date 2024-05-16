@@ -1,18 +1,20 @@
-FROM node:21
+# Use an official Node.js runtime as the base image
+FROM node:18
 
-# Create app directory
-WORKDIR /app
+# Set the working directory in the container
+WORKDIR /usr/src/app
 
-# Install app dependencies
-COPY ./package.json /app
-COPY ./package-lock.json /app
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
 
-RUN npm ci
-# If you are building your code for production
-# RUN npm ci --only=production
+# Install dependencies
+RUN npm install
 
 # Bundle app source
-COPY . /app
+COPY . .
 
+# Expose the port your app runs on
 EXPOSE 3000
-CMD [ "npm", "start" ]
+
+# Define the command to run your app
+CMD ["npm", "run", "dev"]

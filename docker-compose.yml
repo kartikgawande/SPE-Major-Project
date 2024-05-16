@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  # Frontend service
+  frontend:
+    image: pankaj5000/frontend_repo:latest
+    container_name: frontend
+    restart: always
+    ports:
+      - "3000:3000"
+
+  # Backend service
+  backend:
+    image: pankaj5000/backend_repo:latest
+    container_name: backend
+    restart: always
+    ports:
+      - "4000:4000"
+    environment:
+      - MONGODB_URI=mongodb+srv://japankaj282:pankaj7272@cluster0.ywkpfjr.mongodb.net/MERN_STACK_JOB_SEEKING?retryWrites=true&w=majority&appName=Cluster0
