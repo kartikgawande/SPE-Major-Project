@@ -11,6 +11,10 @@ import {errorMiddleware } from "./middlewares/error.js"
 
 const app=express();
 dotenv.config({path:"./config/config.env"})
+
+const isProduction = process.env.NODE_ENV === 'production';
+const connectionString = isProduction ? process.env.MONGO_URL : process.env.TEST_MONGODB_URI;
+
 app.use(cors({
     origin:[process.env.FRONTEND_URL],
     methods:["GET","POST","DELETE","PUT"],
@@ -29,7 +33,7 @@ app.use('/api/v1/user',userRouter);
 app.use('/api/v1/application',applicationRouter);
 app.use('/api/v1/job',jobRouter);
 
-dbConnection();
+dbConnection(connectionString);
 
 app.use(errorMiddleware);
 
