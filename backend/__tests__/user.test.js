@@ -113,6 +113,6 @@ describe('User Authentication and Authorization Endpoints', () => {
       .get('/api/v1/user/logout')
       .set('Cookie', [`token=${token}`]);
     expect(res.statusCode).toEqual(201);
-    expect(res.body).toHaveProperty('message', 'User logged out Succesfully!');
+    expect(res.body).toHaveProperty('message', 'User logged out Successfully!');
   });
 });

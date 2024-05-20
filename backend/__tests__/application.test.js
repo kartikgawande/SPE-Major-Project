@@ -127,7 +127,7 @@ describe('Application Endpoints', () => {
       });
 
     expect(res.statusCode).toEqual(400);
-    expect(res.body).toHaveProperty('message', 'Resume File Required');
+    expect(res.body).toHaveProperty('message', 'Resume file required');
   });
 
   it('should allow job seeker to get all applications', async () => {
@@ -158,7 +158,7 @@ describe('Application Endpoints', () => {
       .set('Cookie', [`token=${jobSeekerToken}`]);
 
     expect(res.statusCode).toEqual(200);
-    expect(res.body).toHaveProperty('message', 'Application deleted Succesfully!');
+    expect(res.body).toHaveProperty('message', 'Application deleted successfully!');
   });
 
   it('should not allow employer to post an application', async () => {
@@ -174,7 +174,7 @@ describe('Application Endpoints', () => {
       .attach('resume', '__tests__/files/test_resume.jpg');
 
     expect(res.statusCode).toEqual(400);
-    expect(res.body).toHaveProperty('message', 'Employer is not allowed to access this resoursces!');
+    expect(res.body).toHaveProperty('message', 'Employer is not allowed to access this resource!');
   });
 
   it('should allow employer to get all applications', async () => {
@@ -205,7 +205,7 @@ describe('Application Endpoints', () => {
       .set('Cookie', [`token=${employerToken}`]);
 
     expect(res.statusCode).toEqual(400);
-    expect(res.body).toHaveProperty('message', 'Employer is not allowed to acces this resoursces!');
+    expect(res.body).toHaveProperty('message', 'Employer is not allowed to access this resource!');
   });
 });
 
