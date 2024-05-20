@@ -1,0 +1,66 @@
+2024-05-20 00:14:12 info: POST /api/v1/user/register
+2024-05-20 00:14:13 info: User registered successfully: john@example.com
+2024-05-20 00:14:54 info: POST /api/v1/user/login
+2024-05-20 00:14:54 warn: Login failed: Invalid password
+2024-05-20 00:14:54 error: Invalid Email or Password - POST /api/v1/user/login
+2024-05-20 00:15:11 info: POST /api/v1/user/login
+2024-05-20 00:15:11 info: User logged in successfully: john@example.com
+2024-05-20 00:16:15 info: GET /api/v1/user/getUser
+2024-05-20 00:16:15 info: Fetched user details: john@example.com
+2024-05-20 00:16:47 info: GET /api/v1/job/getall
+2024-05-20 00:16:47 info: Fetched all jobs
+2024-05-20 00:17:24 info: POST /api/v1/job/post
+2024-05-20 00:17:25 warn: Job Seeker attempted to post a job
+2024-05-20 00:17:25 error: Job Seeker not allowed to access this resource. - POST /api/v1/job/post
+2024-05-20 00:19:06 info: GET /api/v1/application/employer/getall
+2024-05-20 00:19:06 warn: Job Seeker attempted to access employer applications
+2024-05-20 00:19:06 error: Job Seeker is not allowed to access this resource! - GET /api/v1/application/employer/getall
+2024-05-20 00:19:23 info: POST /api/v1/application/post
+2024-05-20 00:19:29 warn: Job not found: 662b45f1c82426766b01e4a5
+2024-05-20 00:19:29 error: Job not found! - POST /api/v1/application/post
+2024-05-20 00:22:36 info: POST /api/v1/application/post
+2024-05-20 00:22:41 info: Application submitted by Job Seeker 664a487d5645d739a75ec657 for job 6645cbd98f8f1db9dbf733a6
+2024-05-20 00:23:09 info: DELETE /api/v1/application/delete/662b70f6dfc244e5eb5eac9d
+2024-05-20 00:23:09 warn: Application not found: 662b70f6dfc244e5eb5eac9d
+2024-05-20 00:23:09 error: Oops, application not found! - DELETE /api/v1/application/delete/662b70f6dfc244e5eb5eac9d
+2024-05-20 00:23:59 info: DELETE /api/v1/application/delete/66446fb72241da9d81478d76
+2024-05-20 00:23:59 info: Job Seeker 664a487d5645d739a75ec657 deleted application 66446fb72241da9d81478d76
+2024-05-20 00:24:23 info: GET /api/v1/user/logout
+2024-05-20 00:24:23 info: User logged out successfully
+2024-05-20 00:24:54 info: POST /api/v1/user/login
+2024-05-20 00:24:54 warn: Login failed: Role mismatch for user pj@gmail.com
+2024-05-20 00:24:54 error: User with this role is not found! - POST /api/v1/user/login
+2024-05-20 00:25:13 info: POST /api/v1/user/login
+2024-05-20 00:25:13 info: User logged in successfully: pj@gmail.com
+2024-05-20 00:25:25 info: GET /api/v1/user/getUser
+2024-05-20 00:25:25 info: Fetched user details: pj@gmail.com
+2024-05-20 00:25:36 info: GET /api/v1/job/getall
+2024-05-20 00:25:36 info: Fetched all jobs
+2024-05-20 00:28:56 info: POST /api/v1/job/post
+2024-05-20 00:28:57 info: Job posted successfully by user 66486b2803658b39567418de
+2024-05-20 00:29:25 error: Expected double-quoted property name in JSON at position 297 (line 11 column 1) - POST /api/v1/job/post
+2024-05-20 00:29:43 info: POST /api/v1/job/post
+2024-05-20 00:29:43 warn: Job post failed: Salary details incomplete
+2024-05-20 00:29:43 error: Please either provide fixed salary or ranged salary. - POST /api/v1/job/post
+2024-05-20 00:30:10 info: POST /api/v1/job/post
+2024-05-20 00:30:10 warn: Job post failed: Salary details incomplete
+2024-05-20 00:30:10 error: Please either provide fixed salary or ranged salary. - POST /api/v1/job/post
+2024-05-20 00:30:24 info: POST /api/v1/job/post
+2024-05-20 00:30:24 info: Job posted successfully by user 66486b2803658b39567418de
+2024-05-20 00:31:33 info: GET /api/v1/job/getmyjobs
+2024-05-20 00:31:34 info: Fetched jobs posted by user 66486b2803658b39567418de
+2024-05-20 00:38:47 info: PUT /api/v1/job/update/6645cbd98f8f1db9dbf733a6
+2024-05-20 00:38:47 info: Job updated successfully: 6645cbd98f8f1db9dbf733a6
+2024-05-20 00:41:34 info: DELETE /api/v1/job//delete/6645cbd98f8f1db9dbf733a6%22
+2024-05-20 00:41:34 error: Cast to ObjectId failed for value "6645cbd98f8f1db9dbf733a6"" (type string) at path "_id" for model "Job" - DELETE /delete/6645cbd98f8f1db9dbf733a6%22
+2024-05-20 00:41:34 error: Resource not found. Invalid _id - DELETE /api/v1/job//delete/6645cbd98f8f1db9dbf733a6%22
+2024-05-20 00:43:04 info: DELETE /api/v1/job//delete/664a4c485645d739a75ec675%22
+2024-05-20 00:43:04 error: Cast to ObjectId failed for value "664a4c485645d739a75ec675"" (type string) at path "_id" for model "Job" - DELETE /delete/664a4c485645d739a75ec675%22
+2024-05-20 00:43:04 error: Resource not found. Invalid _id - DELETE /api/v1/job//delete/664a4c485645d739a75ec675%22
+2024-05-20 00:49:38 info: DELETE /api/v1/application/delete/664a4c485645d739a75ec675
+2024-05-20 00:49:38 warn: Employer attempted to delete a job seeker application
+2024-05-20 00:49:38 error: Employer is not allowed to access this resource! - DELETE /api/v1/application/delete/664a4c485645d739a75ec675
+2024-05-20 00:50:32 info: DELETE /api/v1/job/delete/664a4c485645d739a75ec675
+2024-05-20 00:50:32 info: Job deleted successfully: 664a4c485645d739a75ec675
+2024-05-20 00:51:40 info: GET /api/v1/application/employer/getall
+2024-05-20 00:51:40 info: Employer 66486b2803658b39567418de fetched all applications

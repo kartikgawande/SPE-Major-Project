@@ -1,0 +1,24 @@
+# filebeat.yml
+filebeat.inputs:
+- type: log
+  paths:
+    - /home/pankaj/SPE_MajorProject/SPE-Major-Project/backend/app.log
+  fields:
+    log_type: application
+  fields_under_root: true
+
+- type: log
+  paths:
+    - /home/pankaj/SPE_MajorProject/SPE-Major-Project/backend/exceptions.log
+  fields:
+    log_type: exception
+  fields_under_root: true
+
+#output.elasticsearch:
+ # hosts: ["localhost:9200"]
+
+setup.kibana:
+  host: "localhost:5601"
+
+output.logstash:
+  hosts: ["localhost:5044"]

@@ -21,55 +21,48 @@ services:
 
   # Elasticsearch service
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.14.0
-    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.6
     environment:
       - discovery.type=single-node
-      - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-    volumes:
-      - es_data:/usr/share/elasticsearch/data
+      - xpack.security.enabled=false
     ports:
       - "9200:9200"
     networks:
-      - elk
+      - elastic
 
   # Logstash service
   logstash:
-    image: docker.elastic.co/logstash/logstash:7.14.0
-    container_name: logstash
+    image: docker.elastic.co/logstash/logstash:7.17.6
     volumes:
-      - ./logstash/pipeline:/usr/share/logstash/pipeline
-    environment:
-      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+      - ./backend/logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     ports:
       - "5044:5044"
     networks:
-      - elk
+      - elastic
     depends_on:
       - elasticsearch
 
   # Kibana service
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.14.0
-    container_name: kibana
-    environment:
-      - ELASTICSEARCH_URL=http://elasticsearch:9200
+    image: docker.elastic.co/kibana/kibana:7.17.6
     ports:
       - "5601:5601"
     networks:
-      - elk
+      - elastic
     depends_on:
       - elasticsearch
 
-networks:
-  elk:
-    driver: bridge
+  # Filebeat service
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:7.17.6
+    volumes:
+      - ./backend/filebeat.yml:/usr/share/filebeat/filebeat.yml
+      - /home/pankaj/SPE_MajorProject/SPE-Major-Project/backend:/var/log/backend
+    networks:
+      - elastic
+    depends_on:
+      - logstash
 
-volumes:
-  es_data:
-    driver: local
+networks:
+  elastic:
+    driver: bridge
