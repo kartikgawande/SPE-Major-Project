@@ -19,30 +19,37 @@ pipeline {
             }
         }
         stage('Stage 3: frontend Build') {
+            agent {
+                docker {
+                    image 'node:18' // Use Node.js
+                    args '-v /home/pankaj/SPE_MajorProject/SPE-Major-Project:/workspace' // Mount workspace
+                }
+            }
             steps {
                 dir('frontend') {
+                    sh 'node -v' // Print Node.js version
                     sh "npm install"
                     sh 'docker build -t frontend-image .'
                 }
             }
         }
-        stage('Stage 4: backend Build') {
+        stage('Stage 4: backend Build and Test') {
+            agent {
+                docker {
+                    image 'node:18' // Use Node.js 
+                    args '-v /home/pankaj/SPE_MajorProject/SPE-Major-Project:/workspace' // Mount workspace
+                }
+            }
             steps {
                 dir('backend') {
+                    sh 'node -v' // Print Node.js version
                     sh "npm install"
+                    sh 'npm test' // Run tests
                     sh 'docker build -t backend-image .'
                 }
             }
         }
-        stage('Stage 5: Run Tests') {
-            steps {
-                dir('backend') {
-                
-                    sh 'npm test'
-                }
-            }
-        }
-        stage('Stage 6: Push image to DockerHub') {
+        stage('Stage 5: Push image to DockerHub') {
             steps {
                 script {
                     sh "docker login --username pankaj5000 --password pankaj.1234"
@@ -53,7 +60,7 @@ pipeline {
                 }
             }
         }
-        stage('Stage 7: Clean Docker Images') {
+        stage('Stage 6: Clean Docker Images') {
             steps {
                 script {
                     sh 'docker container prune -f'
@@ -61,7 +68,7 @@ pipeline {
                 }
             }
         }
-        stage('Stage 8: Ansible Deployment') {
+        stage('Stage 7: Ansible Deployment') {
             steps {
                 script {
                     sh 'ansible-playbook -i inventory.ini playbook.yml'
