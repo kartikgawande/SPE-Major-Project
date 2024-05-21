@@ -1,5 +1,8 @@
 pipeline {
     agent any
+     tools {
+        nodejs 'node-18' // replace 'node-16' with the name of the Node.js installation you just created
+    }
     environment {
         mongo_url = "mongodb+srv://japankaj282:pankaj7272@cluster0.ywkpfjr.mongodb.net/MERN_STACK_JOB_SEEKING?retryWrites=true&w=majority&appName=Cluster0"
         JWT_SECRET = "pankajpankajjakanp"
