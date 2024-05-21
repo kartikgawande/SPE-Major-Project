@@ -422,3 +422,85 @@
 2024-05-20 22:49:15 info: GET /api/v1/job/invalid_id
 2024-05-20 22:49:15 error: Fetch single job failed: Invalid ID / CastError (invalid_id)
 2024-05-20 22:49:15 error: Invalid ID / CastError - GET /api/v1/job/invalid_id
+2024-05-21 16:28:12 info: POST /api/v1/user/register
+2024-05-21 16:28:14 info: User registered successfully: jobseeker@example.com
+2024-05-21 16:28:14 info: POST /api/v1/user/register
+2024-05-21 16:28:14 info: User registered successfully: employer@example.com
+2024-05-21 16:28:14 info: POST /api/v1/user/login
+2024-05-21 16:28:15 info: User logged in successfully: jobseeker@example.com
+2024-05-21 16:28:15 info: POST /api/v1/user/login
+2024-05-21 16:28:15 info: User logged in successfully: employer@example.com
+2024-05-21 16:28:15 info: POST /api/v1/job/post
+2024-05-21 16:28:15 info: Job posted successfully by user 664c7e46590d8d8dd48aeffc
+2024-05-21 16:28:15 info: POST /api/v1/application/post
+2024-05-21 16:28:21 info: Application submitted by Job Seeker 664c7e46590d8d8dd48aeff9 for job 664c7e47590d8d8dd48af001
+2024-05-21 16:28:21 info: POST /api/v1/application/post
+2024-05-21 16:28:21 warn: No resume file uploaded
+2024-05-21 16:28:21 error: Resume file required - POST /api/v1/application/post
+2024-05-21 16:28:21 info: GET /api/v1/application/jobseeker/getall
+2024-05-21 16:28:22 info: Job Seeker 664c7e46590d8d8dd48aeff9 fetched their applications
+2024-05-21 16:28:22 info: POST /api/v1/application/post
+2024-05-21 16:28:25 info: Application submitted by Job Seeker 664c7e46590d8d8dd48aeff9 for job 664c7e47590d8d8dd48af001
+2024-05-21 16:28:25 info: DELETE /api/v1/application/delete/664c7e51590d8d8dd48af00c
+2024-05-21 16:28:25 info: Job Seeker 664c7e46590d8d8dd48aeff9 deleted application 664c7e51590d8d8dd48af00c
+2024-05-21 16:28:25 info: POST /api/v1/application/post
+2024-05-21 16:28:25 warn: Employer attempted to post an application
+2024-05-21 16:28:25 error: Employer is not allowed to access this resource! - POST /api/v1/application/post
+2024-05-21 16:28:25 info: GET /api/v1/application/employer/getall
+2024-05-21 16:28:25 info: Employer 664c7e46590d8d8dd48aeffc fetched all applications
+2024-05-21 16:28:25 info: POST /api/v1/application/post
+2024-05-21 16:28:27 info: Application submitted by Job Seeker 664c7e46590d8d8dd48aeff9 for job 664c7e47590d8d8dd48af001
+2024-05-21 16:28:27 info: DELETE /api/v1/application/delete/664c7e53590d8d8dd48af016
+2024-05-21 16:28:27 warn: Employer attempted to delete a job seeker application
+2024-05-21 16:28:27 error: Employer is not allowed to access this resource! - DELETE /api/v1/application/delete/664c7e53590d8d8dd48af016
+2024-05-21 16:28:29 info: POST /api/v1/user/register
+2024-05-21 16:28:30 info: User registered successfully: jobseeker@example.com
+2024-05-21 16:28:30 info: POST /api/v1/user/register
+2024-05-21 16:28:30 info: User registered successfully: employer@example.com
+2024-05-21 16:28:30 info: POST /api/v1/user/login
+2024-05-21 16:28:30 info: User logged in successfully: jobseeker@example.com
+2024-05-21 16:28:30 info: POST /api/v1/user/login
+2024-05-21 16:28:31 info: User logged in successfully: employer@example.com
+2024-05-21 16:28:31 info: POST /api/v1/job/post
+2024-05-21 16:28:31 info: Job posted successfully by user 664c7e567d6140f24634e9f5
+2024-05-21 16:28:31 info: POST /api/v1/job/post
+2024-05-21 16:28:31 warn: Job Seeker attempted to post a job
+2024-05-21 16:28:31 error: Job Seeker not allowed to access this resource. - POST /api/v1/job/post
+2024-05-21 16:28:31 info: GET /api/v1/job/getmyjobs
+2024-05-21 16:28:31 info: Fetched jobs posted by user 664c7e567d6140f24634e9f5
+2024-05-21 16:28:31 info: GET /api/v1/job/getall
+2024-05-21 16:28:32 info: Fetched all jobs
+2024-05-21 16:28:32 info: PUT /api/v1/job/update/664c7e577d6140f24634e9fa
+2024-05-21 16:28:32 info: Job updated successfully: 664c7e577d6140f24634e9fa
+2024-05-21 16:28:32 info: PUT /api/v1/job/update/664c7e577d6140f24634e9fa
+2024-05-21 16:28:32 warn: Job Seeker attempted to update a job
+2024-05-21 16:28:32 error: Job Seeker not allowed to access this resource. - PUT /api/v1/job/update/664c7e577d6140f24634e9fa
+2024-05-21 16:28:32 info: DELETE /api/v1/job/delete/664c7e577d6140f24634e9fa
+2024-05-21 16:28:32 info: Job deleted successfully: 664c7e577d6140f24634e9fa
+2024-05-21 16:28:32 info: DELETE /api/v1/job/delete/664c7e587d6140f24634ea08
+2024-05-21 16:28:32 warn: Job Seeker attempted to delete a job
+2024-05-21 16:28:32 error: Job Seeker not allowed to access this resource. - DELETE /api/v1/job/delete/664c7e587d6140f24634ea08
+2024-05-21 16:28:32 info: GET /api/v1/job/invalid_id
+2024-05-21 16:28:32 error: Fetch single job failed: Invalid ID / CastError (invalid_id)
+2024-05-21 16:28:32 error: Invalid ID / CastError - GET /api/v1/job/invalid_id
+2024-05-21 16:28:34 info: POST /api/v1/user/register
+2024-05-21 16:28:35 info: User registered successfully: testuser@example.com
+2024-05-21 16:28:35 info: POST /api/v1/user/register
+2024-05-21 16:28:35 warn: Registration failed: Email already exists
+2024-05-21 16:28:35 error: Email is Already Exist - POST /api/v1/user/register
+2024-05-21 16:28:35 info: POST /api/v1/user/login
+2024-05-21 16:28:35 info: User logged in successfully: testuser@example.com
+2024-05-21 16:28:35 info: POST /api/v1/user/login
+2024-05-21 16:28:36 warn: Login failed: Invalid password
+2024-05-21 16:28:36 error: Invalid Email or Password - POST /api/v1/user/login
+2024-05-21 16:28:36 info: POST /api/v1/user/login
+2024-05-21 16:28:36 warn: Login failed: Role mismatch for user testuser@example.com
+2024-05-21 16:28:36 error: User with this role is not found! - POST /api/v1/user/login
+2024-05-21 16:28:36 info: POST /api/v1/user/login
+2024-05-21 16:28:36 info: User logged in successfully: testuser@example.com
+2024-05-21 16:28:36 info: GET /api/v1/user/getUser
+2024-05-21 16:28:36 info: Fetched user details: testuser@example.com
+2024-05-21 16:28:36 info: POST /api/v1/user/login
+2024-05-21 16:28:37 info: User logged in successfully: testuser@example.com
+2024-05-21 16:28:37 info: GET /api/v1/user/logout
+2024-05-21 16:28:37 info: User logged out successfully
