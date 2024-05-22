@@ -504,3 +504,147 @@
 2024-05-21 16:28:37 info: User logged in successfully: testuser@example.com
 2024-05-21 16:28:37 info: GET /api/v1/user/logout
 2024-05-21 16:28:37 info: User logged out successfully
+2024-05-22 20:34:26 info: POST /api/v1/user/register
+2024-05-22 20:34:33 info: User registered successfully: jobseeker@example.com
+2024-05-22 20:34:33 info: POST /api/v1/user/register
+2024-05-22 20:34:33 info: User registered successfully: employer@example.com
+2024-05-22 20:34:33 info: POST /api/v1/user/login
+2024-05-22 20:34:33 info: User logged in successfully: jobseeker@example.com
+2024-05-22 20:34:33 info: POST /api/v1/user/login
+2024-05-22 20:34:33 info: User logged in successfully: employer@example.com
+2024-05-22 20:34:34 info: POST /api/v1/job/post
+2024-05-22 20:34:34 info: Job posted successfully by user 664e09819440beea74e1c5e3
+2024-05-22 20:34:34 info: POST /api/v1/application/post
+2024-05-22 20:34:39 info: Application submitted by Job Seeker 664e09819440beea74e1c5e0 for job 664e09829440beea74e1c5e8
+2024-05-22 20:34:39 info: POST /api/v1/application/post
+2024-05-22 20:34:39 warn: No resume file uploaded
+2024-05-22 20:34:39 error: Resume file required - POST /api/v1/application/post
+2024-05-22 20:34:39 info: GET /api/v1/application/jobseeker/getall
+2024-05-22 20:34:39 info: Job Seeker 664e09819440beea74e1c5e0 fetched their applications
+2024-05-22 20:34:39 info: POST /api/v1/application/post
+2024-05-22 20:34:42 info: Application submitted by Job Seeker 664e09819440beea74e1c5e0 for job 664e09829440beea74e1c5e8
+2024-05-22 20:34:42 info: DELETE /api/v1/application/delete/664e098a9440beea74e1c5f3
+2024-05-22 20:34:42 info: Job Seeker 664e09819440beea74e1c5e0 deleted application 664e098a9440beea74e1c5f3
+2024-05-22 20:34:42 info: POST /api/v1/application/post
+2024-05-22 20:34:42 warn: Employer attempted to post an application
+2024-05-22 20:34:42 error: Employer is not allowed to access this resource! - POST /api/v1/application/post
+2024-05-22 20:34:42 info: GET /api/v1/application/employer/getall
+2024-05-22 20:34:42 info: Employer 664e09819440beea74e1c5e3 fetched all applications
+2024-05-22 20:34:42 info: POST /api/v1/application/post
+2024-05-22 20:34:44 info: Application submitted by Job Seeker 664e09819440beea74e1c5e0 for job 664e09829440beea74e1c5e8
+2024-05-22 20:34:44 info: DELETE /api/v1/application/delete/664e098c9440beea74e1c5fd
+2024-05-22 20:34:44 warn: Employer attempted to delete a job seeker application
+2024-05-22 20:34:44 error: Employer is not allowed to access this resource! - DELETE /api/v1/application/delete/664e098c9440beea74e1c5fd
+2024-05-22 20:34:46 info: POST /api/v1/user/register
+2024-05-22 20:34:47 info: User registered successfully: jobseeker@example.com
+2024-05-22 20:34:47 info: POST /api/v1/user/register
+2024-05-22 20:34:47 info: User registered successfully: employer@example.com
+2024-05-22 20:34:47 info: POST /api/v1/user/login
+2024-05-22 20:34:48 info: User logged in successfully: jobseeker@example.com
+2024-05-22 20:34:48 info: POST /api/v1/user/login
+2024-05-22 20:34:48 info: User logged in successfully: employer@example.com
+2024-05-22 20:34:48 info: POST /api/v1/job/post
+2024-05-22 20:34:48 info: Job posted successfully by user 664e098f31504db6d855f946
+2024-05-22 20:34:48 info: POST /api/v1/job/post
+2024-05-22 20:34:48 warn: Job Seeker attempted to post a job
+2024-05-22 20:34:48 error: Job Seeker not allowed to access this resource. - POST /api/v1/job/post
+2024-05-22 20:34:48 info: GET /api/v1/job/getmyjobs
+2024-05-22 20:34:48 info: Fetched jobs posted by user 664e098f31504db6d855f946
+2024-05-22 20:34:48 info: GET /api/v1/job/getall
+2024-05-22 20:34:48 info: Fetched all jobs
+2024-05-22 20:34:48 info: PUT /api/v1/job/update/664e099031504db6d855f94b
+2024-05-22 20:34:49 info: Job updated successfully: 664e099031504db6d855f94b
+2024-05-22 20:34:49 info: PUT /api/v1/job/update/664e099031504db6d855f94b
+2024-05-22 20:34:49 warn: Job Seeker attempted to update a job
+2024-05-22 20:34:49 error: Job Seeker not allowed to access this resource. - PUT /api/v1/job/update/664e099031504db6d855f94b
+2024-05-22 20:34:49 info: DELETE /api/v1/job/delete/664e099031504db6d855f94b
+2024-05-22 20:34:49 info: Job deleted successfully: 664e099031504db6d855f94b
+2024-05-22 20:34:49 info: DELETE /api/v1/job/delete/664e099131504db6d855f959
+2024-05-22 20:34:49 warn: Job Seeker attempted to delete a job
+2024-05-22 20:34:49 error: Job Seeker not allowed to access this resource. - DELETE /api/v1/job/delete/664e099131504db6d855f959
+2024-05-22 20:34:49 info: GET /api/v1/job/invalid_id
+2024-05-22 20:34:49 error: Fetch single job failed: Invalid ID / CastError (invalid_id)
+2024-05-22 20:34:49 error: Invalid ID / CastError - GET /api/v1/job/invalid_id
+2024-05-22 20:34:51 info: POST /api/v1/user/register
+2024-05-22 20:34:52 info: User registered successfully: testuser@example.com
+2024-05-22 20:34:52 info: POST /api/v1/user/register
+2024-05-22 20:34:52 warn: Registration failed: Email already exists
+2024-05-22 20:34:52 error: Email is Already Exist - POST /api/v1/user/register
+2024-05-22 20:34:52 info: POST /api/v1/user/login
+2024-05-22 20:34:52 info: User logged in successfully: testuser@example.com
+2024-05-22 20:34:52 info: POST /api/v1/user/login
+2024-05-22 20:34:52 warn: Login failed: Invalid password
+2024-05-22 20:34:52 error: Invalid Email or Password - POST /api/v1/user/login
+2024-05-22 20:34:52 info: POST /api/v1/user/login
+2024-05-22 20:34:52 warn: Login failed: Role mismatch for user testuser@example.com
+2024-05-22 20:34:52 error: User with this role is not found! - POST /api/v1/user/login
+2024-05-22 20:34:52 info: POST /api/v1/user/login
+2024-05-22 20:34:53 info: User logged in successfully: testuser@example.com
+2024-05-22 20:34:53 info: GET /api/v1/user/getUser
+2024-05-22 20:34:53 info: Fetched user details: testuser@example.com
+2024-05-22 20:34:53 info: POST /api/v1/user/login
+2024-05-22 20:34:53 info: User logged in successfully: testuser@example.com
+2024-05-22 20:34:53 info: GET /api/v1/user/logout
+2024-05-22 20:34:53 info: User logged out successfully
+2024-05-22 22:28:13 info: POST /api/v1/user/register
+2024-05-22 22:28:23 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /register
+2024-05-22 22:28:23 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/register
+2024-05-22 22:28:23 info: POST /api/v1/user/register
+2024-05-22 22:28:33 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /register
+2024-05-22 22:28:33 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/register
+2024-05-22 22:28:33 info: POST /api/v1/user/login
+2024-05-22 22:28:43 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /login
+2024-05-22 22:28:43 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/login
+2024-05-22 22:28:43 info: POST /api/v1/user/login
+2024-05-22 22:28:55 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /login
+2024-05-22 22:28:55 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/login
+2024-05-22 22:28:55 info: POST /api/v1/user/register
+2024-05-22 22:28:55 info: POST /api/v1/job/post
+2024-05-22 22:28:55 error: jwt malformed - POST /post
+2024-05-22 22:28:55 error: Json web Token is Invalid. Try again. - POST /api/v1/job/post
+2024-05-22 22:29:07 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /register
+2024-05-22 22:29:07 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/register
+2024-05-22 22:29:07 info: POST /api/v1/user/register
+2024-05-22 22:29:07 info: POST /api/v1/user/register
+2024-05-22 22:29:12 info: POST /api/v1/user/register
+2024-05-22 22:29:17 info: POST /api/v1/user/login
+2024-05-22 22:29:17 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /register
+2024-05-22 22:29:17 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/register
+2024-05-22 22:29:17 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /register
+2024-05-22 22:29:17 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/register
+2024-05-22 22:29:17 info: POST /api/v1/user/login
+2024-05-22 22:29:22 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /register
+2024-05-22 22:29:22 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/register
+2024-05-22 22:29:22 info: POST /api/v1/user/login
+2024-05-22 22:29:27 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /login
+2024-05-22 22:29:27 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/login
+2024-05-22 22:29:27 info: POST /api/v1/user/login
+2024-05-22 22:29:27 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /login
+2024-05-22 22:29:27 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/login
+2024-05-22 22:29:27 info: POST /api/v1/user/login
+2024-05-22 22:29:32 info: POST /api/v1/user/login
+2024-05-22 22:29:32 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /login
+2024-05-22 22:29:32 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/login
+2024-05-22 22:29:37 info: POST /api/v1/user/login
+2024-05-22 22:29:37 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /login
+2024-05-22 22:29:37 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/login
+2024-05-22 22:29:37 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /login
+2024-05-22 22:29:37 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/login
+2024-05-22 22:29:42 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /login
+2024-05-22 22:29:42 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/login
+2024-05-22 22:29:42 info: GET /api/v1/user/getUser
+2024-05-22 22:29:42 error: jwt malformed - GET /getUser
+2024-05-22 22:29:42 error: Json web Token is Invalid. Try again. - GET /api/v1/user/getUser
+2024-05-22 22:29:48 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /login
+2024-05-22 22:29:48 error: Operation `users.findOne()` buffering timed out after 10000ms - POST /api/v1/user/login
+2024-05-22 22:29:48 info: GET /api/v1/user/logout
+2024-05-22 22:29:48 error: jwt malformed - GET /logout
+2024-05-22 22:29:48 error: Json web Token is Invalid. Try again. - GET /api/v1/user/logout
+2024-05-22 22:34:53 info: GET /api/v1/user/getuser
+2024-05-22 22:34:53 error: User not authorized - GET /api/v1/user/getuser
+2024-05-22 22:34:53 info: GET /api/v1/user/getuser
+2024-05-22 22:34:53 error: User not authorized - GET /api/v1/user/getuser
+2024-05-22 22:35:18 info: POST /api/v1/user/login
+2024-05-22 22:35:18 info: User logged in successfully: pj@gmail.com
+2024-05-22 22:35:18 info: GET /api/v1/user/getuser
+2024-05-22 22:35:18 info: Fetched user details: pj@gmail.com

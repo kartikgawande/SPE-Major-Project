@@ -21,10 +21,7 @@ const logger = createLogger({
         logFormat
       )
     }),
-    new transports.File({ filename: 'app.log' })
-  ],
-  exceptionHandlers: [
-    new transports.File({ filename: 'exceptions.log' })
+    new transports.File({ filename: '/home/pankaj/SPE_MajorProject/SPE-Major-Project/backend/app.log' })
   ]
 });
 
