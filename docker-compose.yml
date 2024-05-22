@@ -35,8 +35,8 @@ services:
     ports:
       - 5044:5044
     volumes:
-      - ./logstash/pipeline:/usr/share/logstash/pipeline
-      - ./logstash/config:/usr/share/logstash/config
+      - .backend/logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+  
     depends_on:
       - elasticsearch
 
