@@ -23,9 +23,7 @@ pipeline {
         }
         stage('Stage 3: Test') {
             steps {
-                script {
-                    sh 'sudo chown -R jenkins:jenkins /home/pankaj/SPE_MajorProject/SPE-Major-Project/backend'
-                }
+
                 dir('backend') {
                     sh 'npm install'
                     sh 'npm test'

@@ -1,5 +1,5 @@
-// logger.js
 import { createLogger, format, transports } from 'winston';
+
 const { combine, timestamp, printf, colorize } = format;
 
 // Define custom log format
@@ -21,7 +21,7 @@ const logger = createLogger({
         logFormat
       )
     }),
-    new transports.File({ filename: 'app.log' })
+    new transports.File({ filename: '/app/logs/app.log' }) // Update the log file path
   ]
 });
 
