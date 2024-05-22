@@ -21,7 +21,7 @@ const logger = createLogger({
         logFormat
       )
     }),
-    new transports.File({ filename: './logs/app.log' }) // Update the log file path
+    new transports.File({ filename: '.backend/logs/app.log' }) // Update the log file path
   ]
 });
 
