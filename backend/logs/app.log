@@ -1,0 +1,82 @@
+2024-05-23 01:24:47 info: POST /api/v1/user/register
+2024-05-23 01:24:49 info: User registered successfully: testuser@example.com
+2024-05-23 01:24:49 info: POST /api/v1/user/register
+2024-05-23 01:24:49 warn: Registration failed: Email already exists
+2024-05-23 01:24:49 error: Email is Already Exist - POST /api/v1/user/register
+2024-05-23 01:24:49 info: POST /api/v1/user/login
+2024-05-23 01:24:49 info: User logged in successfully: testuser@example.com
+2024-05-23 01:24:49 info: POST /api/v1/user/login
+2024-05-23 01:24:49 warn: Login failed: Invalid password
+2024-05-23 01:24:49 error: Invalid Email or Password - POST /api/v1/user/login
+2024-05-23 01:24:49 info: POST /api/v1/user/login
+2024-05-23 01:24:49 warn: Login failed: Role mismatch for user testuser@example.com
+2024-05-23 01:24:49 error: User with this role is not found! - POST /api/v1/user/login
+2024-05-23 01:24:50 info: POST /api/v1/user/login
+2024-05-23 01:24:50 info: User logged in successfully: testuser@example.com
+2024-05-23 01:24:50 info: GET /api/v1/user/getUser
+2024-05-23 01:24:50 info: Fetched user details: testuser@example.com
+2024-05-23 01:24:50 info: POST /api/v1/user/login
+2024-05-23 01:24:50 info: User logged in successfully: testuser@example.com
+2024-05-23 01:24:50 info: GET /api/v1/user/logout
+2024-05-23 01:24:50 info: User logged out successfully
+2024-05-23 01:24:51 info: POST /api/v1/user/register
+2024-05-23 01:24:52 info: User registered successfully: jobseeker@example.com
+2024-05-23 01:24:52 info: POST /api/v1/user/register
+2024-05-23 01:24:52 info: User registered successfully: employer@example.com
+2024-05-23 01:24:52 info: POST /api/v1/user/login
+2024-05-23 01:24:52 info: User logged in successfully: jobseeker@example.com
+2024-05-23 01:24:52 info: POST /api/v1/user/login
+2024-05-23 01:24:53 info: User logged in successfully: employer@example.com
+2024-05-23 01:24:53 info: POST /api/v1/job/post
+2024-05-23 01:24:53 info: Job posted successfully by user 664e4d8cf5d7d87fa902ab3e
+2024-05-23 01:24:53 info: POST /api/v1/job/post
+2024-05-23 01:24:53 warn: Job Seeker attempted to post a job
+2024-05-23 01:24:53 error: Job Seeker not allowed to access this resource. - POST /api/v1/job/post
+2024-05-23 01:24:53 info: GET /api/v1/job/getmyjobs
+2024-05-23 01:24:53 info: Fetched jobs posted by user 664e4d8cf5d7d87fa902ab3e
+2024-05-23 01:24:53 info: GET /api/v1/job/getall
+2024-05-23 01:24:53 info: Fetched all jobs
+2024-05-23 01:24:53 info: PUT /api/v1/job/update/664e4d8df5d7d87fa902ab43
+2024-05-23 01:24:53 info: Job updated successfully: 664e4d8df5d7d87fa902ab43
+2024-05-23 01:24:53 info: PUT /api/v1/job/update/664e4d8df5d7d87fa902ab43
+2024-05-23 01:24:53 warn: Job Seeker attempted to update a job
+2024-05-23 01:24:53 error: Job Seeker not allowed to access this resource. - PUT /api/v1/job/update/664e4d8df5d7d87fa902ab43
+2024-05-23 01:24:53 info: DELETE /api/v1/job/delete/664e4d8df5d7d87fa902ab43
+2024-05-23 01:24:53 info: Job deleted successfully: 664e4d8df5d7d87fa902ab43
+2024-05-23 01:24:53 info: DELETE /api/v1/job/delete/664e4d8df5d7d87fa902ab51
+2024-05-23 01:24:53 warn: Job Seeker attempted to delete a job
+2024-05-23 01:24:53 error: Job Seeker not allowed to access this resource. - DELETE /api/v1/job/delete/664e4d8df5d7d87fa902ab51
+2024-05-23 01:24:53 info: GET /api/v1/job/invalid_id
+2024-05-23 01:24:54 error: Fetch single job failed: Invalid ID / CastError (invalid_id)
+2024-05-23 01:24:54 error: Invalid ID / CastError - GET /api/v1/job/invalid_id
+2024-05-23 01:24:55 info: POST /api/v1/user/register
+2024-05-23 01:24:56 info: User registered successfully: jobseeker@example.com
+2024-05-23 01:24:56 info: POST /api/v1/user/register
+2024-05-23 01:24:56 info: User registered successfully: employer@example.com
+2024-05-23 01:24:56 info: POST /api/v1/user/login
+2024-05-23 01:24:56 info: User logged in successfully: jobseeker@example.com
+2024-05-23 01:24:56 info: POST /api/v1/user/login
+2024-05-23 01:24:56 info: User logged in successfully: employer@example.com
+2024-05-23 01:24:56 info: POST /api/v1/job/post
+2024-05-23 01:24:56 info: Job posted successfully by user 664e4d90e0c363a5a0348f3f
+2024-05-23 01:24:56 info: POST /api/v1/application/post
+2024-05-23 01:25:01 info: Application submitted by Job Seeker 664e4d8fe0c363a5a0348f3c for job 664e4d90e0c363a5a0348f44
+2024-05-23 01:25:01 info: POST /api/v1/application/post
+2024-05-23 01:25:01 warn: No resume file uploaded
+2024-05-23 01:25:01 error: Resume file required - POST /api/v1/application/post
+2024-05-23 01:25:01 info: GET /api/v1/application/jobseeker/getall
+2024-05-23 01:25:01 info: Job Seeker 664e4d8fe0c363a5a0348f3c fetched their applications
+2024-05-23 01:25:01 info: POST /api/v1/application/post
+2024-05-23 01:25:04 info: Application submitted by Job Seeker 664e4d8fe0c363a5a0348f3c for job 664e4d90e0c363a5a0348f44
+2024-05-23 01:25:04 info: DELETE /api/v1/application/delete/664e4d98e0c363a5a0348f4f
+2024-05-23 01:25:04 info: Job Seeker 664e4d8fe0c363a5a0348f3c deleted application 664e4d98e0c363a5a0348f4f
+2024-05-23 01:25:04 info: POST /api/v1/application/post
+2024-05-23 01:25:04 warn: Employer attempted to post an application
+2024-05-23 01:25:04 error: Employer is not allowed to access this resource! - POST /api/v1/application/post
+2024-05-23 01:25:04 info: GET /api/v1/application/employer/getall
+2024-05-23 01:25:05 info: Employer 664e4d90e0c363a5a0348f3f fetched all applications
+2024-05-23 01:25:05 info: POST /api/v1/application/post
+2024-05-23 01:25:07 info: Application submitted by Job Seeker 664e4d8fe0c363a5a0348f3c for job 664e4d90e0c363a5a0348f44
+2024-05-23 01:25:07 info: DELETE /api/v1/application/delete/664e4d9be0c363a5a0348f59
+2024-05-23 01:25:07 warn: Employer attempted to delete a job seeker application
+2024-05-23 01:25:07 error: Employer is not allowed to access this resource! - DELETE /api/v1/application/delete/664e4d9be0c363a5a0348f59
