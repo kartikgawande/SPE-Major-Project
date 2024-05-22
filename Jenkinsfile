@@ -25,9 +25,15 @@ pipeline {
             steps {
 
                 dir('backend') {
-                    sh 'npm install'
-                    sh 'npm test'
-                }
+            sh 'npm install'
+            sh '''
+                docker run --rm -v ${PWD}:/app -w /app node:18 bash -c "
+                    mkdir -p /app/logs
+                    chmod -R 777 /app/logs
+                    npm test
+                "
+            '''
+        }
             }
         }
         stage('Stage 4: frontend Build') {
