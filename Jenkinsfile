@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        nodejs 'node-18' // replace 'node-18' with the name of the Node.js installation you just created
+        nodejs 'node-18'
     }
     environment {
         mongo_url = "mongodb+srv://japankaj282:pankaj7272@cluster0.ywkpfjr.mongodb.net/MERN_STACK_JOB_SEEKING?retryWrites=true&w=majority&appName=Cluster0"
@@ -21,10 +21,10 @@ pipeline {
                 sh 'npm config rm https-proxy'
             }
         }
-        stage('Stage 3: Setup Environment') {
+        stage('Stage 3: Setup Directory for Logs') {
             steps {
-                sh 'mkdir -p $WORKSPACE/backend'
-                sh 'mkdir -p $WORKSPACE/frontend'
+                sh 'sudo mkdir -p /usr/share/filebeat/logs'
+                sh 'sudo chown -R $USER:$USER /usr/share/filebeat/logs'
             }
         }
         stage('Stage 4: Test') {
@@ -38,7 +38,7 @@ pipeline {
         stage('Stage 5: frontend Build') {
             steps {
                 dir('frontend') {
-                    sh 'npm install'
+                    sh "npm install"
                     sh 'docker build -t frontend-image .'
                 }
             }
@@ -46,7 +46,7 @@ pipeline {
         stage("Stage 6: backend Build") {
             steps {
                 dir('backend') {
-                    sh 'npm install'
+                    sh "npm install"
                     sh 'docker build -t backend-image .'
                 }
             }
