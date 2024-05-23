@@ -23,8 +23,8 @@ pipeline {
         }
         stage('Stage 3: Setup Environment') {
             steps {
-                sh 'mkdir -p /home/pankaj/SPE_MajorProject/SPE-Major-Project/backend'
-                sh 'chown -R jenkins:jenkins /home/pankaj/SPE_MajorProject/SPE-Major-Project'
+                sh 'mkdir -p $WORKSPACE/backend'
+                sh 'mkdir -p $WORKSPACE/frontend'
             }
         }
         stage('Stage 4: Test') {
