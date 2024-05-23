@@ -1,60 +1,69 @@
-version: "3.9"
+version: '3.8'
 
 services:
+  # Frontend service
   frontend:
     image: pankaj5000/frontend-image:latest
-    ports:
-      - 3000:3000
+    container_name: frontend
     restart: always
-    depends_on:
-      - backend
+    ports:
+      - "3000:3000"
 
+  # Backend service
   backend:
     image: pankaj5000/backend-image:latest
-    ports:
-      - 4000:4000
+    container_name: backend
     restart: always
+    ports:
+      - "4000:4000"
     environment:
-      - mongo_url=mongodb+srv://japankaj282:pankaj7272@cluster0.ywkpfjr.mongodb.net/MERN_STACK_JOB_SEEKING?retryWrites=true&w=majority&appName=Cluster0
-      - JWT_SECRET=pankajpankajjakanp
-    volumes:
-      - ./backend/logs:/app/logs # Mount the logs directory
+      - MONGODB_URI=mongodb+srv://japankaj282:pankaj7272@cluster0.ywkpfjr.mongodb.net/MERN_STACK_JOB_SEEKING?retryWrites=true&w=majority&appName=Cluster0
 
+  # Elasticsearch service
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.6
-    ports:
-      - 9200:9200
+    container_name: elasticsearch
     environment:
       - discovery.type=single-node
-      - ES_JAVA_OPTS=-Xms512m -Xmx512m
-    volumes:
-      - elasticsearch-data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+    networks:
+      - elastic
 
+  # Logstash service
   logstash:
     image: docker.elastic.co/logstash/logstash:7.17.6
-    ports:
-      - 5044:5044
+    container_name: logstash
     volumes:
-      - .backend/logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
-  
-    depends_on:
-      - elasticsearch
+      - /home/pankaj/SPE_MajorProject/SPE-Major-Project/backend/logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    ports:
+      - "5044:5044"
+    networks:
+      - elastic
 
+  # Kibana service
   kibana:
     image: docker.elastic.co/kibana/kibana:7.17.6
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
     ports:
-      - 5601:5601
-    depends_on:
-      - elasticsearch
+      - "5601:5601"
+    networks:
+      - elastic
 
+  # Filebeat service
   filebeat:
     image: docker.elastic.co/beats/filebeat:7.17.6
-    user: root
+    container_name: filebeat
     volumes:
-      - ./backend/filebeat.yml:/usr/share/filebeat/filebeat.yml
-      - ./backend/logs:/app/logs
+      - /home/pankaj/SPE_MajorProject/SPE-Major-Project/backend/filebeat.yml:/usr/share/filebeat/filebeat.yml
+      - /home/pankaj/SPE_MajorProject/SPE-Major-Project/backend/app.log:/usr/share/filebeat/logs/app.log
+    networks:
+      - elastic
     depends_on:
       - logstash
 
-volumes:
-  elasticsearch-data:
+networks:
+  elastic:
+    driver: bridge
