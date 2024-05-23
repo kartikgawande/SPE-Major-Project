@@ -648,3 +648,26 @@
 2024-05-22 22:35:18 info: User logged in successfully: pj@gmail.com
 2024-05-22 22:35:18 info: GET /api/v1/user/getuser
 2024-05-22 22:35:18 info: Fetched user details: pj@gmail.com
+2024-05-23 09:16:55 info: GET /api/v1/user/getuser
+2024-05-23 09:16:55 error: User not authorized - GET /api/v1/user/getuser
+2024-05-23 09:16:55 info: GET /api/v1/user/getuser
+2024-05-23 09:16:55 error: User not authorized - GET /api/v1/user/getuser
+2024-05-23 09:17:21 info: POST /api/v1/user/login
+2024-05-23 09:17:21 info: User logged in successfully: pj@gmail.com
+2024-05-23 09:17:22 info: GET /api/v1/user/getuser
+2024-05-23 09:17:22 info: Fetched user details: pj@gmail.com
+2024-05-23 09:17:27 info: GET /api/v1/job/getall
+2024-05-23 09:17:27 info: GET /api/v1/job/getall
+2024-05-23 09:17:27 info: Fetched all jobs
+2024-05-23 09:17:27 info: Fetched all jobs
+2024-05-23 09:17:33 info: GET /api/v1/job/66446f5b2241da9d81478d67
+2024-05-23 09:17:33 info: GET /api/v1/job/66446f5b2241da9d81478d67
+2024-05-23 09:17:33 info: Fetched single job: 66446f5b2241da9d81478d67
+2024-05-23 09:17:33 info: Fetched single job: 66446f5b2241da9d81478d67
+2024-05-23 09:17:35 info: GET /api/v1/user/logout
+2024-05-23 09:17:35 info: User logged out successfully
+2024-05-23 09:17:36 info: GET /api/v1/user/getuser
+2024-05-23 09:17:36 error: User not authorized - GET /api/v1/user/getuser
+2024-05-23 09:20:25 info: POST /api/v1/user/register
+2024-05-23 09:20:26 warn: Registration failed: Incomplete form submission
+2024-05-23 09:20:26 error: Please fill full registration form! - POST /api/v1/user/register
