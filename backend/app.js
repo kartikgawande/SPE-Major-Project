@@ -17,7 +17,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 const connectionString = isProduction ? process.env.MONGO_URL : process.env.TEST_MONGODB_URI;
 
 app.use(cors({
-  origin: [process.env.FRONTEND_URL],
+ // origin: [process.env.FRONTEND_URL],
+ origin: true,
   methods: ['GET', 'POST', 'DELETE', 'PUT'],
   credentials: true,
 }));

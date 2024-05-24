@@ -671,3 +671,23 @@
 2024-05-23 09:20:25 info: POST /api/v1/user/register
 2024-05-23 09:20:26 warn: Registration failed: Incomplete form submission
 2024-05-23 09:20:26 error: Please fill full registration form! - POST /api/v1/user/register
+2024-05-23 09:42:43 info: GET /api/v1/user/getuser
+2024-05-23 09:42:43 info: GET /api/v1/user/getuser
+2024-05-23 09:42:43 error: User not authorized - GET /api/v1/user/getuser
+2024-05-23 09:42:44 error: User not authorized - GET /api/v1/user/getuser
+2024-05-23 09:43:40 info: POST /api/v1/user/register
+2024-05-23 09:43:40 info: User registered successfully: kg@gmail.com
+2024-05-23 09:43:41 info: GET /api/v1/user/getuser
+2024-05-23 09:43:41 info: Fetched user details: kg@gmail.com
+2024-05-23 09:43:46 info: GET /api/v1/job/getall
+2024-05-23 09:43:46 info: GET /api/v1/job/getall
+2024-05-23 09:43:46 info: Fetched all jobs
+2024-05-23 09:43:46 info: Fetched all jobs
+2024-05-23 09:43:48 info: GET /api/v1/job/66446f5b2241da9d81478d67
+2024-05-23 09:43:48 info: GET /api/v1/job/66446f5b2241da9d81478d67
+2024-05-23 09:43:48 info: Fetched single job: 66446f5b2241da9d81478d67
+2024-05-23 09:43:48 info: Fetched single job: 66446f5b2241da9d81478d67
+2024-05-23 09:43:54 info: GET /api/v1/user/logout
+2024-05-23 09:43:54 info: User logged out successfully
+2024-05-23 09:43:54 info: GET /api/v1/user/getuser
+2024-05-23 09:43:54 error: User not authorized - GET /api/v1/user/getuser
